@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Main app component that renders the ValentinePage as the single-purpose entry point.",
+  "frontend/src/pages/ValentinePage.tsx": "Interactive Valentine's Day page with robust collision-detection logic that uses offsetWidth/offsetHeight for accurate button dimensions, useLayoutEffect with requestAnimationFrame for reliable initial positioning, and comprehensive overlap prevention ensuring the evasive \"No\" button never collides with the static \"Yes! 💕\" button across all interactions and viewport changes.",
+  "frontend/src/index.css": "Global styles with romantic pink-themed OKLCH color system, plus custom animations including the heart burst effect (heartBurst keyframe) and reduced-motion alternatives.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family and extended border radius for softer, more romantic styling.",
+  "frontend/src/hooks/useQueries.ts": "Empty file as no backend queries are needed for this frontend-only application.",
+  "frontend/src/components/HeartBurst.tsx": "Lightweight React component that renders a short-lived burst of 8-12 hearts radiating from a click position using CSS keyframes (transform/opacity only), self-cleaning after animation completion.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "Custom React hook that reads and subscribes to the prefers-reduced-motion media query, returning a boolean to conditionally disable or alter animations."
+}

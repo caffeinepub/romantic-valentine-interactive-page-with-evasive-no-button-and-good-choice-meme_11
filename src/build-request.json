@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Fix evasive “No” button overlapping the “Yes! 💕” button",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Fix the Valentine page so the evasive “No” button never overlaps (or visually collides with) the static “Yes! 💕” button, including on initial render, after any evasive move (mouse enter, touch start, pointer down, click), and after viewport/container resize or orientation changes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "No button is still overlapping yes button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On initial render, the “No” button does not overlap the “Yes! 💕” button (with a visible gap between them).",
+        "After repeatedly triggering evasive movement (desktop hover and mobile touch/pointer down/click), the “No” button never overlaps or touches the “Yes! 💕” button.",
+        "After resizing the browser window and rotating a mobile device (orientation change), the “No” button position is corrected if needed and still does not overlap the “Yes! 💕” button.",
+        "The fix is implemented in the existing Valentine page (frontend/src/pages/ValentinePage.tsx) without changing the user-facing text."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui (read-only UI components must be composed, not edited).",
+    "Do not edit immutable hook/bootstrap paths listed in SYSTEM_CONTEXT (e.g., frontend/src/hooks/useInternetIdentity.ts(x), frontend/src/hooks/useActor.ts, frontend/src/main.tsx).",
+    "Keep the backend as-is (single Motoko actor; no backend changes required for this UI bugfix)."
+  ],
+  "nonGoals": [
+    "Do not change the success view content (“Good choice ❤️” and the existing meme image) or the heart-burst animation behavior.",
+    "Do not add new pages, routing, authentication changes, or persistence."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Prevent evasive “No” button from colliding with the “Yes! 💕” button",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Ensure the evasive “No” button never overlaps or touches the static “Yes! 💕” button across initial render, all evasive triggers, and resize/orientation changes.",
+      "acceptanceCriteria": [
+        "On initial render, the “No” button does not overlap the “Yes! 💕” button (with a visible gap between them).",
+        "After repeatedly triggering evasive movement (desktop hover and mobile touch/pointer down/click), the “No” button never overlaps or touches the “Yes! 💕” button.",
+        "After resizing the browser window and rotating a mobile device (orientation change), the “No” button position is corrected if needed and still does not overlap the “Yes! 💕” button.",
+        "The fix is implemented in the existing Valentine page (frontend/src/pages/ValentinePage.tsx) without changing the user-facing text."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ValentinePage.tsx",
+          "operation": "modify",
+          "description": "Refactor the evasive positioning logic to be collision-proof: compute candidate “No” positions against the live “Yes” button rect with a required minimum gap, validate/correct on initial layout (use layout-timed measurement such as requestAnimationFrame or useLayoutEffect rather than setTimeout), re-validate after every evasive move trigger, and re-validate on resize/orientation/container size changes so the “No” button is automatically re-positioned if it would collide."
+        }
+      ]
+    }
+  ]
+}

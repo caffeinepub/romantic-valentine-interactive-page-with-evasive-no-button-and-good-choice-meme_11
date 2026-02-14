@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 11,
+  "summary": "Build a simple romantic interactive Valentine web page (HTML/CSS/JS) with Yes/No choices where the No button evades interaction and Yes reveals a meme-style “Good choice ❤️” message/image, optimized to run on Android Chrome, with an added small heart animation on Yes click.",
+  "architectural_notes": [
+    "Use a single self-contained HTML file with embedded CSS and JavaScript for easy running on Android Chrome."
+  ],
+  "known_issues": [
+    "\"No\" button sometimes moves out of the visible viewport / off-screen during evasive behavior (especially on mobile), making it disappear from display.",
+    "Evasive “No” button sometimes overlaps the “Yes” button after moving, causing UI overlap/clutter."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-purpose-mobile-friendly-valentine-page-that-asks-will-you-be-my-valentine-and-presents-exactly-two-choices-yes-and-no",
+      "title": "Create a single-purpose, mobile-friendly Valentine page that asks: “Will you be my Valentine?” and presents exactly two choices: “Yes” and “No”.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-evasive-behavior-for-the-no-option-so-it-cannot-be-clicked-when-the-pointer-hovers-over-no-desktop-or-when-the-user-attempts-to-touch-press-it-mobile-move-the-no-control-to-a-new-position-within-the-visible-viewport",
+      "title": "Implement evasive behavior for the “No” option so it cannot be clicked: when the pointer hovers over “No” (desktop) or when the user attempts to touch/press it (mobile), move the “No” control to a new position within the visible viewport.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-the-user-clicks-yes-replace-the-choices-with-a-meme-style-success-view-that-displays-the-text-good-choice-and-shows-the-provided-generated-meme-image",
+      "title": "When the user clicks “Yes”, replace the choices with a meme-style success view that displays the text “Good choice ❤️” and shows the provided/generated meme image.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-romantic-visual-theme-with-a-pink-and-white-color-scheme-including-consistent-typography-spacing-and-ui-styling-across-the-page",
+      "title": "Apply a romantic visual theme with a pink-and-white color scheme, including consistent typography, spacing, and UI styling across the page.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-static-image-asset-s-under-frontend-public-assets-generated-and-render-them-directly-from-the-frontend-no-backend-routing",
+      "title": "Add the required static image asset(s) under frontend/public/assets/generated and render them directly from the frontend (no backend routing).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-evasive-no-button-positioning-so-it-never-moves-outside-the-visible-viewport-or-becomes-partially-fully-off-screen-during-hover-touch-evasive-behavior-especially-on-mobile-update-the-positioning-logic-in-the-valentine-page-so-every-new-randomized-position-keeps-the-entire-button-within-the-container-s-visible-bounds-accounting-for-the-button-s-actual-rendered-position-including-existing-centering-offsets-transforms-and-any-padding-safe-margin",
+      "title": "Fix the evasive “No” button positioning so it never moves outside the visible viewport or becomes partially/fully off-screen during hover/touch evasive behavior (especially on mobile). Update the positioning logic in the Valentine page so every new randomized position keeps the entire button within the container’s visible bounds, accounting for the button’s actual rendered position (including existing centering offsets/transforms) and any padding/safe margin.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-valentine-page-so-the-evasive-no-button-never-overlaps-or-visually-collides-with-the-static-yes-button-including-on-initial-render-and-after-any-evasive-move-on-desktop-or-mobile",
+      "title": "Update the Valentine page so the evasive “No” button never overlaps (or visually collides with) the static “Yes! 💕” button, including on initial render and after any evasive move on desktop or mobile.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-adjust-the-evasive-position-generation-logic-in-frontend-src-pages-valentinepage-tsx-to-treat-the-yes-button-as-a-keep-out-zone-when-selecting-a-new-randomized-no-position-and-re-roll-clamp-the-candidate-position-until-it-satisfies-both-a-within-container-safe-bounds-and-b-non-overlap-with-the-yes-button",
+      "title": "Adjust the evasive-position generation logic in frontend/src/pages/ValentinePage.tsx to treat the “Yes! 💕” button as a keep-out zone when selecting a new randomized “No” position, and re-roll/clamp the candidate position until it satisfies both (a) within-container safe bounds and (b) non-overlap with the “Yes! 💕” button.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-small-delightful-heart-animation-effect-that-plays-immediately-when-the-user-clicks-the-yes-button-making-the-success-interaction-feel-more-special-without-changing-the-existing-success-content-good-choice-meme-image",
+      "title": "Add a small, delightful heart animation effect that plays immediately when the user clicks the “Yes! 💕” button, making the success interaction feel more special without changing the existing success content (“Good choice ❤️” + meme image).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-new-yes-heart-animation-respects-accessibility-and-performance-expectations-reduced-motion-and-lightweight-rendering",
+      "title": "Ensure the new “Yes” heart animation respects accessibility and performance expectations (reduced motion and lightweight rendering).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-valentine-page-so-the-evasive-no-button-never-overlaps-or-visually-collides-with-the-static-yes-button-including-on-initial-render-after-any-evasive-move-mouse-enter-touch-start-pointer-down-click-and-after-viewport-container-resize-or-orientation-changes",
+      "title": "Fix the Valentine page so the evasive “No” button never overlaps (or visually collides with) the static “Yes! 💕” button, including on initial render, after any evasive move (mouse enter, touch start, pointer down, click), and after viewport/container resize or orientation changes.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a simple romantic-themed Valentine web page that asks the user to be my Valentine (single-purpose page).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add two options (Yes/No) with fully interactive behavior using HTML/CSS/JavaScript.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement evasive behavior: when hovering over the No option, it moves away so it cannot be clicked.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "On clicking Yes, display a meme image/message saying “Good choice ❤️”.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Apply a romantic pink and white color scheme and styling.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Ensure the page runs easily on Android phone using Chrome (mobile-friendly).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add a small heart animation effect when the user clicks “Yes” to make the success interaction more special.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Romantic Valentine interactive page with evasive “No” button and “Good choice ❤️” meme reveal",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

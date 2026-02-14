@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-fix-the-valentine-page-so-the-evasive-no-button-never-overlaps-or-visually-collides-with-the-static-yes-button-including-on-initial-render-after-any-evasive-move-mouse-enter-touch-start-pointer-down-click-and-after-viewport-container-resize-or-orientation-changes",
+      "featureTitle": "Fix the Valentine page so the evasive “No” button never overlaps (or visually collides with) the static “Yes! 💕” button, including on initial render, after any evasive move (mouse enter, touch start, pointer down, click), and after viewport/container resize or orientation changes.",
+      "files": [
+        "frontend/src/pages/ValentinePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

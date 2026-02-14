@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no backend logic.",
+  "feature_evidence.json": "Metadata describing a feature requirement tied to ValentinePage.tsx.",
+  "frontend-file-summaries.txt": "Prewritten summaries of key frontend files for build reference.",
+  "frontend/index.css": "Tailwind base and theme variables defining global light/dark color tokens.",
+  "frontend/index.html": "Minimal HTML shell mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Renders ValentinePage as the root component.",
+  "frontend/src/components/HeartBurst.tsx": "Generates animated heart particles around a click point and self-cleans after completion.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages a backend actor instance tied to Internet Identity, with query invalidation on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides Internet Identity authentication context, managing login, stored identities, and status tracking.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "Hook that tracks the prefers-reduced-motion media query.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future backend query hooks.",
+  "frontend/src/index.css": "Tailwind global theme, animations, and heart-burst keyframes with reduced-motion fallbacks.",
+  "frontend/src/main.tsx": "Bootstraps React root with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/ValentinePage.tsx": "Interactive Valentine page implementing collision-free evasive 'No' button logic, heart burst effects, and responsive repositioning.",
+  "frontend/tailwind.config.js": "Tailwind configuration defining dark mode, content paths, extended theme colors, fonts, animations, and plugins including typography, container queries, and animate.",
+  "project_state.json": "Project state describing a Valentine web page, its features, issues with the evasive 'No' button, and requirements for fixes and theme elements."
+}
